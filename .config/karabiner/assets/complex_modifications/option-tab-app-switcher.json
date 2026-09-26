@@ -1,0 +1,65 @@
+{
+    "title": "Option+Tab for native App Switcher (frees up Cmd+Tab)",
+    "rules": [
+        {
+            "description": "Shift+Option+Tab -> Shift+Command+Tab (cycle switcher backwards)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "tab",
+                        "modifiers": { "mandatory": ["option", "shift"], "optional": [] }
+                    },
+                    "to": [
+                        { "key_code": "tab", "modifiers": ["command", "shift"] }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Option+Tab -> Command+Tab (open/cycle app switcher)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "tab",
+                        "modifiers": { "mandatory": ["option"], "optional": [] }
+                    },
+                    "to": [
+                        { "key_code": "tab", "modifiers": ["command"] }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Free Command+Tab from app switching -> remaps to F19 (bind to anything else you like)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "tab",
+                        "modifiers": { "mandatory": ["command"], "optional": [] }
+                    },
+                    "to": [
+                        { "key_code": "f19" }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Free Shift+Command+Tab -> remaps to F20 (bind to anything else you like)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "tab",
+                        "modifiers": { "mandatory": ["command", "shift"], "optional": [] }
+                    },
+                    "to": [
+                        { "key_code": "f20" }
+                    ]
+                }
+            ]
+        }
+    ]
+}

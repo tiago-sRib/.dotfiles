@@ -1,0 +1,47 @@
+{
+    "title": "Option+grave -> cycle windows in app (PT/ISO safe)",
+    "rules": [
+        {
+            "description": "Option+Shift+grave -> Cmd+Shift+grave (cycle windows backwards)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "non_us_backslash",
+                        "modifiers": { "mandatory": ["option", "shift"], "optional": ["caps_lock"] }
+                    },
+                    "to": [ { "key_code": "non_us_backslash", "modifiers": ["command", "shift"] } ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "grave_accent_and_tilde",
+                        "modifiers": { "mandatory": ["option", "shift"], "optional": ["caps_lock"] }
+                    },
+                    "to": [ { "key_code": "grave_accent_and_tilde", "modifiers": ["command", "shift"] } ]
+                }
+            ]
+        },
+        {
+            "description": "Option+grave -> Cmd+grave (cycle windows in app)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "non_us_backslash",
+                        "modifiers": { "mandatory": ["option"], "optional": ["caps_lock"] }
+                    },
+                    "to": [ { "key_code": "non_us_backslash", "modifiers": ["command"] } ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "grave_accent_and_tilde",
+                        "modifiers": { "mandatory": ["option"], "optional": ["caps_lock"] }
+                    },
+                    "to": [ { "key_code": "grave_accent_and_tilde", "modifiers": ["command"] } ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+# This repo's work tree is $HOME, so ignore everything and opt files in.
+# Un-ignore a directory level by level: `!/dir/` then `/dir/*` then `!/dir/file`.
+
+/*
+!/.gitignore
+!/.github/
+
+# shell
+!/.zshrc
+
+# tmux
+!/.tmux.conf
+
+# ~/.config
+!/.config/
+/.config/*
+!/.config/zsh/
+!/.config/wezterm/
+!/.config/nvim/
+
+# karabiner: settings and custom rules, not its automatic_backups/
+!/.config/karabiner/
+/.config/karabiner/*
+!/.config/karabiner/karabiner.json
+!/.config/karabiner/assets/
+
+# Finder metadata anywhere that was opted in above
+.DS_Store
